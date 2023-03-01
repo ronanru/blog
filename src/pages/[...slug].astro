@@ -1,0 +1,61 @@
+---
+import { Image } from '@astrojs/image/components';
+import {} from 'astro/';
+import { CollectionEntry, getCollection } from 'astro:content';
+import getReadingTime from 'reading-time';
+import PostTitle from '../components/postTitle';
+import ScrollProgress from '../components/scrollProgress';
+import Layout from '../layout.astro';
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+};
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout
+  description={post.data.description}
+  title={post.data.title}
+  image={post.data.image}
+  postData={post.data}
+>
+  <ScrollProgress client:only />
+  <article class="space-y-6">
+    <Image
+      src={`/images/${post.data.image}`}
+      alt={post.data.imageAltText}
+      width={768}
+      height={432}
+      class="rounded-xl shadow"
+    />
+    <div class="space-y-4">
+      <h1 class="text-bright text-5xl font-bold">
+        <PostTitle>{post.data.title}</PostTitle>
+      </h1>
+      <p>
+        <time datetime={post.data.pubDate.toISOString()}>
+          {
+            post.data.pubDate.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }
+        </time>
+        - {getReadingTime(post.body).text}
+      </p>
+    </div>
+    <div
+      class="prose prose-neutral max-w-none dark:prose-invert prose-a:decoration-green-600"
+    >
+      <Content />
+    </div>
+  </article>
+</Layout>
