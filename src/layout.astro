@@ -2,7 +2,6 @@
 import { Image } from '@astrojs/image/components';
 import '@fontsource/ubuntu';
 import type { CollectionEntry } from 'astro:content';
-import type { JSXElement } from 'solid-js';
 import DarkModeToggle from './components/darkModeToggle';
 import './global.css';
 
@@ -32,7 +31,7 @@ const title = Astro.props.title
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/webp" href="/images/peppo.webp" />
-    <link rel="alternative icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternative icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
