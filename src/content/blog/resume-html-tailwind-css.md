@@ -67,7 +67,11 @@ Now that my new resume looks great, the question was how to convert it to a PDF.
 </html>
 ```
 
-Also, to convert the page correctly, in the print options, under "More Settings" I set "Margins" to "None" and enables the "Background graphics" option. After making these changes, it converted my resume without any issues.
+Also, to convert the page correctly, in the print options, under "More Settings" I set "Margins" to "None" and enables the "Background graphics" option.
+
+![A screenshot of the print options](/images/resume-html-tailwind-css/print-options.webp)
+
+After making these changes, it converted my resume without any issues.
 
 ## Conclusion
 
