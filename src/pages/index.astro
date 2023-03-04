@@ -10,6 +10,10 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout>
+  <script>
+    import { inject } from '@vercel/analytics';
+    inject();
+  </script>
   <h1 class="text-bright text-3xl font-bold">
     Hi there 👋, welcome to my blog! <br />Here are my Latest Posts:
   </h1>
