@@ -24,4 +24,7 @@
   .prose * {
     @apply transition-colors;
   }
+  .cool-scrollbar {
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-600;
+  }
 }

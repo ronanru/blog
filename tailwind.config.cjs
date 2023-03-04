@@ -15,6 +15,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+      mono: ['"Cascadia Code"', '"Fira Code"', ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [

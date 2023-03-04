@@ -2,7 +2,7 @@
 title: 'Stop Using Express.js in 2023'
 description: 'Looking for the best JavaScript or TypeScript framework to build your REST APIs in 2023? Discover why you should stop using Express.js and explore faster and more modern alternatives.'
 pubDate: '2023-03-01'
-image: 'stop-using-express.webp'
+image: 'stop-using-express/main-image.webp'
 imageAltText: 'A gravestone with the Express.js logo on it'
 ---
 
