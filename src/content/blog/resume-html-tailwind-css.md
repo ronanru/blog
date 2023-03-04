@@ -40,7 +40,7 @@ After filling in the resume, I wanted to also add logos for different programmin
 
 ![A list of programming languages with logos](/images/resume-html-tailwind-css/icons.webp)
 
-Luckily, I found that in astro you can do it easily with the `astro-icon` package. This package uses [Iconify](https://iconify.design/), an icon library that combines dozens of different icon packs into one. The most interesting icon pack for me was the [SVG Logos](https://icon-sets.iconify.design/logos/) as it includes all logos for different tech companies, programming languages, etc. Now adding these icons is as simple as:
+Luckily, I found that in astro you can do it easily with the `astro-icon` package. This package uses [Iconify](https://iconify.design/), an icon library that combines dozens of different icon packs into one. The most interesting icon pack for me was the [SVG Logos](https://icon-sets.iconify.design/logos/) as it includes all logos for different tech companies, programming languages, etc. Now, adding these icons is as simple as:
 
 ```html
 <Icon pack="logos" name="rust" class="inline h-5 w-5" /> Rust,
@@ -49,7 +49,7 @@ Luckily, I found that in astro you can do it easily with the `astro-icon` packag
 
 ## Converting site to PDF
 
-Now that my new resume looks great, the question was how to convert it to a PDF. In the print menu (<kbd>Ctrl</kbd>+<kbd>P</kbd>) you can choose a special "Save as PDF" printer and save the page as a PDF. However, when I did it for the first time, I noticed it wasn't perfect, the margins were a lot bigger, background for some elements was missing, etc. Some issues I fixed with CSS, for some I just needed to adjust a setting in the printing menu. Tailwind has a [`print:`](https://tailwindcss.com/docs/hover-focus-and-other-states#print-styles) prefix for styles that should only be applied while printing. I used it to removed all margins and set the page to use the full width and height while printing. Here's what my updated template looks like:
+Now that my new resume looks great, the question was how to convert it to a PDF. In the print menu (<kbd>Ctrl</kbd>+<kbd>P</kbd>) you can choose a special "Save as PDF" printer and save the page as a PDF. However, when I did it for the first time, I noticed it wasn't perfect, the margins were a lot bigger, background for some elements was missing, etc. Some issues I fixed with CSS, for some I just needed to adjust a setting in the printing menu. Tailwind has a [`print:`](https://tailwindcss.com/docs/hover-focus-and-other-states#print-styles) prefix for styles that should only be applied while printing. I used it to remove all margins and set the page to use the full width and height while printing. Here's what my updated template looks like:
 
 ```html
 <html lang="en">
