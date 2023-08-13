@@ -5,7 +5,7 @@ import getReadingTime from 'reading-time';
 import Layout from '../layout.astro';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -25,13 +25,14 @@ const posts = (await getCollection('blog')).sort(
           class="text-bright translate-y-0 space-y-2 rounded-xl border-2 border-transparent p-2 transition-all duration-300 hover:-translate-y-2 hover:border-green-600"
         >
           <Image
+            transition:name={`${post.slug}-image`}
             src={`/images/${post.data.image}`}
             class="rounded-lg shadow"
             width={352}
             height={198}
             alt={post.data.imageAltText}
           />
-          <p>
+          <p transition:name={`${post.slug}-data`}>
             <time datetime={post.data.pubDate.toISOString()}>
               {post.data.pubDate.toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -41,7 +42,10 @@ const posts = (await getCollection('blog')).sort(
             </time>
             - {getReadingTime(post.body).text}
           </p>
-          <p class="hover:text-bright text-2xl font-semibold">
+          <p
+            class="hover:text-bright text-2xl font-semibold"
+            transition:name={`${post.slug}-text`}
+          >
             {post.data.title}
           </p>
         </a>

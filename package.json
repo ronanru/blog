@@ -1,37 +1,36 @@
 {
-	"name": "blog",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/image": "^0.15.1",
-		"@astrojs/mdx": "^0.17.2",
-		"@astrojs/rss": "^2.1.1",
-		"@astrojs/sitemap": "^1.1.0",
-		"@astrojs/solid-js": "^2.0.2",
-		"@astrojs/tailwind": "^3.0.1",
-		"@fontsource/ubuntu": "^4.5.11",
-		"@tailwindcss/typography": "^0.5.9",
-		"@vercel/analytics": "^0.1.11",
-		"astro": "^2.0.16",
-		"mdast-util-to-string": "^3.1.1",
-		"reading-time": "^1.5.0",
-		"sharp": "^0.31.3",
-		"solid-js": "^1.4.3",
-		"solid-wrap-balancer": "^0.0.5",
-		"tailwind-scrollbar": "^2.1.0",
-		"tailwindcss": "^3.0.24"
-	},
-	"devDependencies": {
-		"prettier": "^2.8.4",
-		"prettier-plugin-astro": "^0.8.0",
-		"prettier-plugin-organize-imports": "^3.2.2",
-		"prettier-plugin-tailwindcss": "^0.2.3"
-	}
+  "name": "blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.17.3",
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/rss": "^2.4.4",
+    "@astrojs/sitemap": "^2.0.1",
+    "@astrojs/solid-js": "^2.2.0",
+    "@astrojs/tailwind": "^4.0.0",
+    "@fontsource/ubuntu": "^5.0.8",
+    "@tailwindcss/typography": "^0.5.9",
+    "@vercel/analytics": "^1.0.2",
+    "astro": "^2.10.7",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0",
+    "sharp": "^0.32.4",
+    "solid-js": "^1.7.11",
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.1",
+    "prettier-plugin-astro": "^0.11.0",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-tailwindcss": "^0.5.2"
+  }
 }

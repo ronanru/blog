@@ -4,6 +4,7 @@ import '@fontsource/ubuntu';
 import type { CollectionEntry } from 'astro:content';
 import DarkModeToggle from './components/darkModeToggle';
 import './global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 export type Props = {
   title?: string;
@@ -71,8 +72,8 @@ const title = Astro.props.title
           <meta property="article:author" content="Matvey Ryabchikov" />
         </>
       )
-    }</head
-  >
+    }<ViewTransitions />
+  </head>
   <body
     class="cool-scrollbar flex min-h-screen flex-col gap-8 p-8 text-neutral-700 accent-green-600 transition-colors dark:bg-neutral-900 dark:text-neutral-300"
   >
@@ -120,7 +121,7 @@ const title = Astro.props.title
         </nav>
       </div>
     </header>
-    <main class="container flex-1">
+    <main class="container flex-1" transition:animate="morph">
       <slot />
     </main>
     <footer class="container text-xs">

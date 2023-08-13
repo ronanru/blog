@@ -3,7 +3,6 @@ import { Image } from '@astrojs/image/components';
 import {} from 'astro/';
 import { CollectionEntry, getCollection } from 'astro:content';
 import getReadingTime from 'reading-time';
-import PostTitle from '../components/postTitle';
 import ScrollProgress from '../components/scrollProgress';
 import Layout from '../layout.astro';
 
@@ -29,6 +28,7 @@ const { Content } = await post.render();
   <ScrollProgress client:only />
   <article class="space-y-6">
     <Image
+      transition:name={`${post.slug}-image`}
       src={`/images/${post.data.image}`}
       alt={post.data.imageAltText}
       width={768}
@@ -36,10 +36,13 @@ const { Content } = await post.render();
       class="rounded-xl shadow"
     />
     <div class="space-y-4">
-      <h1 class="text-bright text-5xl font-bold">
-        <PostTitle>{post.data.title}</PostTitle>
+      <h1
+        class="text-bright text-5xl font-bold [text-wrap:balance]"
+        transition:name={`${post.slug}-text`}
+      >
+        {post.data.title}
       </h1>
-      <p>
+      <p transition:name={`${post.slug}-data`}>
         <time datetime={post.data.pubDate.toISOString()}>
           {
             post.data.pubDate.toLocaleDateString('en-US', {
@@ -49,7 +52,7 @@ const { Content } = await post.render();
             })
           }
         </time>
-        - {getReadingTime(post.body).text}
+         - {getReadingTime(post.body).text}
       </p>
     </div>
     <div

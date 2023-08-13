@@ -8,6 +8,9 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.ronanru.com',
+  experimental: {
+    viewTransitions: true,
+  },
   integrations: [
     image({
       serviceEntryPoint: '@astrojs/image/sharp',
