@@ -27,7 +27,7 @@ const posts = (await getCollection('blog')).sort(
           <Image
             transition:name={`${post.slug}-image`}
             src={`/images/${post.data.image}`}
-            class="rounded-lg shadow"
+            class="mx-auto rounded-lg shadow"
             width={352}
             height={198}
             alt={post.data.imageAltText}
