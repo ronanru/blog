@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import getReadingTime from 'reading-time';
 import Layout from '../layout.astro';
@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
     inject();
   </script>
   <h1 class="text-bright text-3xl font-bold">
-    Hi there 👋, welcome to my blog! <br />Here are my Latest Posts:
+    Hi there 👋, welcome to my blog! <br />Here are my latest Posts:
   </h1>
   <div class="mt-8 grid gap-6 sm:grid-cols-2">
     {
