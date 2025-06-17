@@ -1,9 +1,9 @@
 ---
-title: 'Stop Using Express.js in 2023'
-description: 'Looking for the best JavaScript or TypeScript framework to build your REST APIs in 2023? Discover why you should stop using Express.js and explore faster and more modern alternatives.'
-pubDate: '2023-03-01'
-image: 'stop-using-express/main-image.webp'
-imageAltText: 'A gravestone with the Express.js logo on it'
+title: "Stop Using Express.js in 2023"
+description: "Looking for the best JavaScript or TypeScript framework to build your REST APIs in 2023? Discover why you should stop using Express.js and explore faster and more modern alternatives."
+pubDate: "2023-03-01"
+image: "stop-using-express/main-image.webp"
+imageAltText: "A gravestone with the Express.js logo on it"
 ---
 
 For years, express.js has been the standard choice for building REST APIs with JavaScript or TypeScript. It has around 30 million weekly downloads (twice as much as React), and nearly all beginner tutorials recommend it. However, in today's landscape, there are now alternatives that offer better developer experiences and performance. In this post, we'll explore some of these alternatives and why you should consider them over Express.

@@ -1,22 +1,22 @@
 ---
-import { Image } from 'astro:assets';
-import '@fontsource/ubuntu';
-import type { CollectionEntry } from 'astro:content';
-import DarkModeToggle from './components/darkModeToggle';
-import './global.css';
-import { ViewTransitions } from 'astro:transitions';
+import { Image } from "astro:assets";
+import "@fontsource/ubuntu";
+import type { CollectionEntry } from "astro:content";
+import DarkModeToggle from "./components/darkModeToggle";
+import "./global.css";
+import { ClientRouter } from "astro:transitions";
 
 export type Props = {
   title?: string;
   description?: string;
   image?: string;
-  postData?: CollectionEntry<'blog'>['data'];
+  postData?: CollectionEntry<"blog">["data"];
 };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {
-  description = 'A blog about web development',
+  description = "A blog about web development",
   image,
   postData,
 } = Astro.props;
@@ -43,7 +43,7 @@ const title = Astro.props.title
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content={new URL(`/images/${image || 'peppo.webp'}`, Astro.url)}
+      content={new URL(`/images/${image || "peppo.webp"}`, Astro.url)}
     />
     <link
       rel="alternate"
@@ -55,12 +55,19 @@ const title = Astro.props.title
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     {image && <meta property="twitter:card" content="summary_large_image" />}
     <script is:inline>
-      let darkmode = localStorage.getItem('darkmode');
+      var darkmode = localStorage.getItem("darkmode");
       if (!darkmode)
         darkmode = window
-          .matchMedia('(prefers-color-scheme: dark)')
+          .matchMedia("(prefers-color-scheme: dark)")
           .matches.toString();
-      if (darkmode === 'true') document.documentElement.classList.add('dark');
+      if (darkmode === "true") document.documentElement.classList.add("dark");
+      document.addEventListener("astro:after-swap", () => {
+        if (darkmode === "true") document.documentElement.classList.add("dark");
+      });
+    </script>
+    <script async fetchpriority="low">
+      import { inject } from "@vercel/analytics";
+      inject();
     </script>
     {
       postData && (
@@ -72,12 +79,13 @@ const title = Astro.props.title
           <meta property="article:author" content="Matvey Ryabchikov" />
         </>
       )
-    }<ViewTransitions />
+    }
+    <ClientRouter />
   </head>
   <body
     class="cool-scrollbar flex min-h-screen flex-col gap-8 p-8 text-neutral-700 accent-green-600 transition-colors dark:bg-neutral-900 dark:text-neutral-300"
   >
-    <header class="container flex gap-4">
+    <header class="container flex gap-4" transition:name="header">
       <a href="/">
         <Image
           src="/images/peppo.webp"
@@ -121,10 +129,10 @@ const title = Astro.props.title
         </nav>
       </div>
     </header>
-    <main class="container flex-1" transition:animate="morph">
+    <main class="container flex-1" transition:animate="animate">
       <slot />
     </main>
-    <footer class="container text-xs">
+    <footer class="container text-xs" transition:name="footer">
       &copy; {new Date().getFullYear()} Matvey Ryabchikov.<br />All blog posts
       are licensed under <a
         class="text-bright underline decoration-green-600"

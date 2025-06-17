@@ -1,9 +1,9 @@
 ---
-title: 'How I made my resume with HTML and Tailwind CSS'
-description: 'Learn how I made my resume with HTML and Tailwind CSS and how you can do the same.'
-pubDate: '2023-03-04'
-image: 'resume-html-tailwind-css/main-image.webp'
-imageAltText: 'HTML + Tailwind CSS = PDF'
+title: "How I made my resume with HTML and Tailwind CSS"
+description: "Learn how I made my resume with HTML and Tailwind CSS and how you can do the same."
+pubDate: "2023-03-04"
+image: "resume-html-tailwind-css/main-image.webp"
+imageAltText: "HTML + Tailwind CSS = PDF"
 ---
 
 My first resume was hastily put together using LibreOffice Writer. However, I soon realized that to increase my chances of getting hired, I needed to create a standout resume that would set me apart from other applicants. Since I didn't want to spend money on an expensive template or learn how to use a PDF editor, I decided to find a way to create a PDF using web technologies. In this post, I will share how I used HTML and Tailwind CSS to create my resume.

@@ -1,9 +1,9 @@
 ---
-title: 'Lucia Auth or NextAuth, which one to use in a Next.js project?'
-description: 'What is the best authentication library for Next.js?'
-pubDate: '2023-10-22'
-image: 'lucia-auth-vs-next-auth/main-image.webp'
-imageAltText: 'Lucia Auth vs NextAuth'
+title: "Lucia Auth or NextAuth, which one to use in a Next.js project?"
+description: "What is the best authentication library for Next.js?"
+pubDate: "2023-10-22"
+image: "lucia-auth-vs-next-auth/main-image.webp"
+imageAltText: "Lucia Auth vs NextAuth"
 ---
 
 Most modern apps require some form of authentication. There are many ways to implement it for a new Next.js app. You can, of course, roll your own auth, creating all necessary endpoints and writing all code for creating auth tokens yourself, only using the `crypto` module. I think every dev should do auth this way at least once, just to understand how everything works on a deeper level, but this approach involves a lot of boilerplate code, and even the smallest bug in the auth implementation can become a critical vulnerability. That's why many devs choose to use third-party services like Clerk or Supabase. They make it super easy to add simple authentication, but the moment after you reach more users than the free plan allows, they can become really pricey. The third and, in my opinion, the best way is to use an open-source auth library, like Auth.js or Lucia. But which one should you choose?
@@ -14,7 +14,7 @@ Let's first talk about Auth.js. It started out as NextAuth, a library for Next.j
 
 ```ts
 // /src/pages/api/auth/[...nextauth].ts
-import NextAuth from 'next-auth';
+import NextAuth from "next-auth";
 
 export default NextAuth({
   /* Configuration here */

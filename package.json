@@ -10,26 +10,27 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.0",
-    "@astrojs/rss": "^4.0.0",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/solid-js": "^3.0.2",
-    "@astrojs/tailwind": "^5.0.3",
-    "@fontsource/ubuntu": "^5.0.8",
-    "@tailwindcss/typography": "^0.5.10",
-    "@vercel/analytics": "^1.1.1",
-    "astro": "^4.0.2",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/solid-js": "^5.1.0",
+    "@fontsource/ubuntu": "^5.2.6",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.10",
+    "@vercel/analytics": "^1.5.0",
+    "astro": "^5.9.4",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sharp": "^0.33.0",
-    "solid-js": "^1.8.7",
-    "tailwind-scrollbar": "^3.0.5",
-    "tailwindcss": "^3.3.6"
+    "sharp": "^0.34.2",
+    "solid-js": "^1.9.7",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
-    "prettier": "^3.1.0",
-    "prettier-plugin-astro": "^0.12.2",
-    "prettier-plugin-organize-imports": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.9"
-  }
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.12"
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
 }
