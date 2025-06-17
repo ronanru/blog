@@ -87,7 +87,13 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
 }
 
-export const Image = ({ src, width, height, loading = "lazy", ...props }) => {
+export const Image = ({
+  src,
+  width,
+  height,
+  loading = "lazy",
+  ...props
+}: ImageProps) => {
   const imgProps = useVercelOptimizedImageProps(src, width, height);
   return <img loading={loading} {...imgProps} {...props} />;
 };
