@@ -65,10 +65,7 @@ const title = Astro.props.title
         if (darkmode === "true") document.documentElement.classList.add("dark");
       });
     </script>
-    <script async fetchpriority="low">
-      import { inject } from "@vercel/analytics";
-      inject();
-    </script>
+
     {
       postData && (
         <>
@@ -142,5 +139,9 @@ const title = Astro.props.title
         CC BY-SA
       </a>.
     </footer>
+    <script>
+      import { inject } from "@vercel/analytics";
+      inject();
+    </script>
   </body>
 </html>
